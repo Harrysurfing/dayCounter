@@ -12,12 +12,15 @@
 	</body>
 	<script>
 		var together = new Date("Jan 23, 2021").getTime();
+		var atm = new Date().getTime();
+		document.querySelector(".day").innerHTML = Math.floor(
+			(atm - together) / (1000 * 60 * 60 * 24)
+		);
 		setInterval(() => {
 			var now = new Date().getTime();
 			var diff = now - together;
-			var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
 			document.querySelector(".day").innerHTML = days;
-		}, 1000);
+		}, 600000);
 	</script>
 </html>

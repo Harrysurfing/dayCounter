@@ -1,7 +1,10 @@
 body {
-	color: pink;
+	color: white;
 	font-size: larger;
 	font-weight: bold;
 	font-family: monospace;
 	background-color: #2f3437;
+}
+.day {
+	color: pink;
 }

@@ -7,7 +7,9 @@
 		<title>Day Counter</title>
 		<link rel="stylesheet" href="counterStyle.css" />
 	</head>
-	<body></body>
+	<body>
+		 💞We have been together for <span class="day"></span> days
+	</body>
 	<script>
 		var together = new Date("Jan 23, 2021").getTime();
 		setInterval(() => {
@@ -15,7 +17,7 @@
 			var diff = now - together;
 			var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-			document.body.innerHTML = days;
+			document.querySelector(".day").innerHTML = days;
 		}, 1000);
 	</script>
 </html>

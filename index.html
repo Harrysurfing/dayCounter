@@ -19,6 +19,7 @@
 		setInterval(() => {
 			var now = new Date().getTime();
 			var diff = now - together;
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
 			document.querySelector(".day").innerHTML = days;
 		}, 600000);

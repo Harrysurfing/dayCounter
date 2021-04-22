@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		 💞You have been together for <span class="day"></span> days!
+		<div class="special"></div>
 	</body>
 	<script>
 		var together = new Date("Jan 23, 2021").getTime();
@@ -16,6 +17,29 @@
 		document.querySelector(".day").innerHTML = Math.floor(
 			(atm - together) / (1000 * 60 * 60 * 24)
 		);
+		let ireneM = 4;
+		let ireneD = 16;
+
+		let harryM = 7;
+		let harryD = 21;
+
+		let anniM = 1;
+		let anniD = 23;
+
+		let currentM = new Date().getMonth();
+		let currentD = new Date().getDate();
+
+		if (currentM == ireneM && currentD == ireneD) {
+			document.querySelector(".special").innerHTML =
+				"Today is Irene's birthday!";
+		} else if (currentM == harryM && currentD == harryD) {
+			document.querySelector(".special").innerHTML =
+				"Today is Harry's birthday!";
+		} else if (currentM == anniM && currentD == anniD) {
+			document.querySelector(".special").innerHTML =
+				"Today is your anniversary!";
+		}
+
 		setInterval(() => {
 			var now = new Date().getTime();
 			var diff = now - together;

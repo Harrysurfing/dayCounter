@@ -26,6 +26,9 @@
 		let anniM = 0;
 		let anniD = 23;
 
+		let marryM = 2;
+		let marryD = 19;
+
 		let currentM = new Date().getMonth();
 		let currentD = new Date().getDate();
 
@@ -37,7 +40,12 @@
 				"    🥳Today is Harry's birthday!";
 		} else if (currentM == anniM && currentD == anniD) {
 			document.querySelector(".special").innerHTML =
-				"    🥳Today is your anniversary!";
+				"    🥳Today is your dating anniversary!";
+		}
+
+		if(currentM == marryM && currentD == marryD){
+			document.querySelector(".special").innerHTML  = 
+			"    🥳Today is your marriage anniversary!";
 		}
 
 		setInterval(() => {
